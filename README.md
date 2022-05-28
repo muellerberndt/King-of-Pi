@@ -1,6 +1,6 @@
 # The King of Pi 👑
 
-This is an onogoing competition. Whoever computes the first 16 decimal places of Pi the fastest is the current King of Pi and great honor shall be bestowed upon them.
+This is an onogoing competition. Whoever computes the first 31,337 integers of Pi after the decimal point the fastest is the King of Pi and great honor shall be bestowed upon them.
 
 ## Benchmarking example
 
