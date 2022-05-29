@@ -27,5 +27,5 @@ def pi():
     decimal.getcontext().prec -= 2
     return +s               # unary plus applies the new precision
 
-decimal.getcontext().prec = 17
+decimal.getcontext().prec = 31337
 print(pi())
