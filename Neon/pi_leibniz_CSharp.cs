@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace pi_leibniz_C#
+namespace pi_leibniz_CSharp
 {
     class Program
     {
