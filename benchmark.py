@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+import subprocess
 
 if __name__ == "__main__":
 
@@ -15,9 +16,14 @@ if __name__ == "__main__":
     with open(pi_file, "r") as F:
         PI = F.readlines()[0][:31339] # Const Pi with 31337 digits after comma
 
-    command = " ".join(sys.argv[1:])
+    command = sys.argv[1:]
 
     st = time.process_time()
+
+    process = subprocess.Popen(command, stdout=subprocess.PIPE)
+    process.wait()
+
+    result = process.stdout.read()
 
     # TODO: Execute Pi program and verify output
 
@@ -25,6 +31,7 @@ if __name__ == "__main__":
 
     res = et - st
 
+    print("Result: {}".format(result))
     print("Execution time: {} ms".format(res * 1000))
 
 
