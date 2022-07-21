@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Algo: https://rosettacode.org/wiki/Pi#Python
 
 pi_digits = str()
