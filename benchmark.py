@@ -14,25 +14,25 @@ if __name__ == "__main__":
     pi_file = os.path.join(os.getcwd(), "PI.txt");
 
     with open(pi_file, "r") as F:
-        PI = F.readlines()[0][:31339] # Const Pi with 31337 digits after comma
+        PI = F.readlines()[0][:10002] # Const Pi with 10000 digits after comma. 2 extra chars for "3."
 
     command = sys.argv[1:]
 
-    st = time.process_time()
+    st = time.time()
 
     process = subprocess.Popen(command, stdout=subprocess.PIPE)
     process.wait()
 
-    result = process.stdout.read()
+    et = time.time()
 
-    # TODO: Execute Pi program and verify output
-
-    et = time.process_time()
-
+    result = process.stdout.read().decode("utf-8").rstrip()
     res = et - st
 
-    print("Result: {}".format(result))
-    print("Execution time: {} ms".format(res * 1000))
+    if (result == PI):
+      print("Result is correct.")
+      print("Execution time: {} ms".format(res * 1000))
+    else:
+      print ("Result is incorrect.\nReturned value: {}\n\nExpected value: {}".format(result, PI));
 
 
     
