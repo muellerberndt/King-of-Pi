@@ -2,9 +2,19 @@
 
 # Algo: https://rosettacode.org/wiki/Pi#Python
 
+import cython
+
 pi_digits = str()
 
-q, r, t, k, n, l, c = 1, 0, 1, 1, 3, 3, 0
+q: cython.int = 1
+r: cython.int = 0
+t: cython.int = 1
+k: cython.int = 1
+n: cython.int = 1
+l: cython.int = 3
+c: cython.int = 0
+
+# q, r, t, k, n, l, c = 1, 0, 1, 1, 3, 3, 0
 
 while c <= 10000:
   if 4*q+r-t < n*t:
