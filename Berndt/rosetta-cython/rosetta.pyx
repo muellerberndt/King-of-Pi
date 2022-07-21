@@ -34,4 +34,4 @@ while c <= 10000:
       n  = nn
       r  = nr
  
-print("3.{}".format(pi_digits[1:]))
+print("{}.{}".format(pi_digits[0],pi_digits[1:]))
