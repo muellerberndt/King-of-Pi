@@ -12,7 +12,7 @@ $ python benchmark.py <command(s)>
 
 Your program must output only the precise value of Pi starting with 3.141592653589793238462(...) and with 10,000 digits after the decimal point.
 
-- [Example program](Berndt/pi_rosetta.py)
+- [Example code](Berndt/pi_rosetta/pi_rosetta.py)
 
 ```
 % ./benchmark.py Berndt/pi_rosetta.py 
